@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AstroLens — AI Space Explainer</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>AstroLens</h1>
+      <p class="tag">AI-powered explainer for space & astrophysics — 3 levels + visuals</p>
+    </header>
+
+    <section class="search">
+      <input id="conceptInput" placeholder="Type concept (e.g. Chandrasekhar limit, pulsar, dark matter)" />
+      <div class="controls">
+        <button id="explainBtn">Explain</button>
+        <select id="imageSource">
+          <option value="ai">AI visualization (canvas)</option>
+          <option value="nasa">Embed NASA / JPL imagery (if available)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="outputs">
+      <div class="cards">
+        <div class="card" id="beginnerCard"><h3>Beginner</h3><div class="card-body" id="beginnerText">—</div></div>
+        <div class="card" id="intermediateCard"><h3>Intermediate</h3><div class="card-body" id="intermediateText">—</div></div>
+        <div class="card" id="advancedCard"><h3>Advanced</h3><div class="card-body" id="advancedText">—</div></div>
+      </div>
+
+      <aside class="visualization">
+        <h3>Visualization</h3>
+        <div class="viz-body">
+          <canvas id="vizCanvas" width="640" height="360"></canvas>
+          <div id="imageContainer" class="image-placeholder">No image</div>
+        </div>
+        <h4>Applications / Current Research</h4>
+        <div id="applications" class="card-body">—</div>
+      </aside>
+    </section>
+
+    <footer class="foot">
+      <small>Tip: Keep the backend running locally at <code>http://localhost:5000</code></small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
